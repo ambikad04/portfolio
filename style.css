@@ -1,0 +1,876 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Rubik&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Rubik', sans-serif;
+}
+
+:root {
+    --bg-color: #1a202d;
+    --second-bg-color: #242b38;
+    --text-color: #ffffffb6;
+    --main-color: rgb(248, 191, 69);
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+body {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding-top: 70px; /* Adjust the padding based on your fixed header height */
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Set a maximum width for the content container */
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000; /* Increase the z-index to ensure it's above other elements */
+}
+
+/* Additional styles for better layout */
+section {
+    margin-bottom: 20px;
+}
+
+
+
+.home {
+    text-align: left;
+    max-width: 800px; /* Adjust the value as needed */
+    margin: 0 auto; /* Center the content horizontally */
+}
+
+
+.home-content h3 {
+    font-size: 15px;
+    font-weight: 100;
+
+}
+
+.home-content h1 {
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+/* Define the animation */
+@keyframes scalebtn {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+.btn {
+    display: inline-block;
+    float: right;
+    margin-top: -70px;
+    margin-bottom: 20px;
+    justify-content: right;
+    padding: 1.5rem 2.2rem;
+    background: var(--main-color);
+    border-radius: 1rem;
+    font-size: 1.6rem;
+    color: var(--second-bg-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+    animation: scaleButton 1s ease-in-out infinite; /* Adjust the duration and timing function as needed */
+}
+
+.btn:hover {
+    background-color: #f4f2ed;
+  }
+.btn:focus {
+    border: 2px solid #4CAF50;
+}
+
+.social-media {
+    margin-top: 20px; /* Add some margin for better visibility */
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 25px; /* Adjust the margin between icon and text */
+    padding-left: 1.5%;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    font-size: 3rem;
+    color: var(--main-color);
+    box-sizing: content-box;
+    opacity: 0;
+    transform: translateY(50px); /* Initially positioned below the viewport */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    
+}
+
+
+.social-media a i {
+    font-size: 24px;
+    margin-right: 2px;
+}
+
+.social-media a .text {
+    display: block;
+    font-size: 10px;
+}
+
+@keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+.social-media a {
+    animation: slideUp 0.2s forwards;
+    animation-delay: calc(var(--animation-order) * 0.1s); /* Add delay based on order */
+    --animation-order: 0; /* Reset variable for each element */
+}
+
+
+/* Adjust order variable for each element */
+.social-media a:nth-child(2) { --animation-order: 1; }
+.social-media a:nth-child(3) { --animation-order: 2; }
+.social-media a:nth-child(4) { --animation-order: 3; }
+
+.social-media .text {
+    font-size: 10px; /* Adjust the font size for the text as needed */
+    margin-right: 20px; /* Adjust the space after the text */
+
+  }
+
+.social-media a:hover {
+    color: #bbef1e; /* Change the color on hover */
+}
+
+.aboutme h3 {
+    margin-top: 35px;
+    font-size: 23px;
+    color: #fff;
+
+}
+
+.aboutme p {
+    margin-top: 5px;
+    font-size: 15px;
+    letter-spacing: .1rem;
+    
+}
+
+.things h3{
+    margin-top: 35px;
+    font-size: 23px;
+    color: #fff;
+}
+
+.things button{
+    margin-top: 10px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background: #16346b;
+    border-radius: 40px;
+    font-size: 15px;
+    font-weight: 200;
+    color: #fff;
+    margin-right: 10px;
+
+}
+
+
+.technologies h3 {
+    margin-bottom: 20px;
+    margin-top: 35px;
+    font-size: 23px;
+    color: #fff;
+}
+
+/*.technologies a{
+    margin-top: 25px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    font-size: 3rem;
+    padding-left: 1.5%;
+    box-sizing: content-box;
+    text-decoration: none;
+    margin: 5px; /* Adding some margin between links for better visibility 
+
+
+}*/
+
+.technologies {
+    text-align: left; /* Center the content */
+}
+
+.icons-container {
+    display: flex; /* Use flexbox to create a flex container for icons */
+    justify-content: left; /* left items horizontally */
+}
+
+
+.technologies a {
+    margin: 5px;
+    padding: 2px;
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: center; /* Center items vertically */
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+
+.technologies a i {
+    font-size: 24px; /* Adjust the icon size as needed */
+    margin-right: 10px; /* Adjust the space between the icon and text */
+    
+}
+
+.technologies a i::after {
+    content: attr(data-text); /* Use the data-text attribute as content */
+    font-size: 14px; /* Adjust the text size as needed */
+}
+
+
+@keyframes rollInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+.technologies a.bx-html5, .technologies a.bx-css3, .technologies a.bx-javascript,
+.technologies a.bx-c-plus-plus, .technologies a.bx-java, .technologies a.bx-php,
+.technologies a.bx-python, .technologies a.mysql {
+animation: rollInRight 0.4s forwards;
+}
+
+.bx-html5 { color: #E44D26; }
+.bx-css3 { color: #1572B6; }
+.bx-javascript { color: #F0DB4F; }
+.bx-c-plus-plus { color: #00599C; }
+.bx-windows { color: #0078D6; }
+.bx-java { color: #007396; }
+.bx-php { color: #777BB4; }
+.bx-python { color: #3776AB; }
+.mysql { color: #ed8b52; }
+.pandas { color: #150458; }
+
+
+
+.web {
+    text-align: left;
+    max-width: 1000px; /* Adjust the value as needed */
+    margin: 0 auto; /* Center the content horizontally */
+}
+
+
+
+.web h3 {
+    margin-bottom: 20px;
+    margin-top: 35px;
+    font-size: 23px;
+    color: #fff;
+}
+
+.web-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    flex: 1 1 30rem;
+    width: 35rem; 
+    height: 40rem; 
+    background: var(--second-bg-color);
+    border-radius: 1rem;
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+  
+.web-box:hover {
+    border-color: var(--bg-color);
+    transform: scale(1.1);
+}
+  
+
+.web-box i {
+    font-size: 24px;
+    margin-right: 5px;
+}
+  
+.web-box h2{
+    padding-top: 8%;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--main-color);
+}
+
+.web-box p {
+    font-size: 15px;
+    text-align: left;
+    padding-left: 8%;
+    padding-right: 8%;
+
+}
+
+.machine {
+    text-align: left;
+    max-width: 1000px; /* Adjust the value as needed */
+    margin: 0 auto; /* Center the content horizontally */
+}
+
+.machine h3 {
+    margin-bottom: 20px;
+    margin-top: 35px;
+    font-size: 23px;
+    color: #fff;
+}
+
+.web-box2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    flex: 1 1 30rem;
+    width: 35rem; 
+    height: 40rem; 
+    background: var(--second-bg-color);
+    border-radius: 1rem;
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.web-box2:hover {
+    border-color: var(--bg-color);
+    transform: scale(1.1);
+}
+.web-box2 i {
+    font-size: 24px;
+    margin-right: 5px;
+}
+  
+.web-box2 h2{
+    padding-top: 8%;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--main-color);
+}
+
+.web-box2 p {
+    font-size: 15px;
+    text-align: left;
+    padding-left: 8%;
+    padding-right: 8%;
+
+}
+
+.certificate h2 {
+    margin-bottom: 5rem;
+} 
+
+.certificate h3 {
+    margin-bottom: 20px;
+    margin-top: 35px;
+    margin-left: 90px;
+    font-size: 23px;
+    color: #fff;
+}
+
+.certificate-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.certificate-container .web-box3 {
+    display: flex;
+    margin-left: 10px;
+    margin-right: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: -5px;
+    flex: 0.3 0.2 1rem;
+    width: 1rem; 
+    height: 20rem; 
+    background: var(--second-bg-color);
+    border-radius: 1rem;
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+ 
+.web-box3:hover {
+    border-color: var(--bg-color);
+    transform: scale(1.1);
+}
+  
+
+.web-box3 i {
+    font-size: 3rem;
+    color: #4285F4; /* Set the desired color, in this case, the Google blue color */
+}
+
+.web-box3 .btn {
+    display: inline-block;
+    float: right;
+    margin-top: 2px;
+    margin-bottom: 20px;
+    justify-content: right;
+    padding: 0.5rem 1.2rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: var(--second-bg-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+    animation: scaleButton 1s ease-in-out infinite; /* Adjust the duration and timing function as needed */
+
+}
+
+.web-box3 p {
+    font-size: 10px;
+    text-align: left;
+    padding-left: 8%;
+    padding-right: 8%;
+
+}
+.Project h3 {
+    margin-bottom: 20px;
+    margin-top: 35px;
+    margin-left: 110px;
+    font-size: 23px;
+    color: #fff;
+}
+
+
+.project-slider h3{
+        margin-bottom: 20px;
+        margin-top: 35px;
+        font-size: 23px;
+        color: #fff;
+}
+.myprojects h2{
+    margin-bottom: 5rem;
+}
+
+.project-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 110px;
+    gap: 2rem;
+    flex: 1 1 30rem;
+    width: 50rem; 
+    height: 55rem; 
+    background: var(--second-bg-color);
+    border-radius: 1rem;
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-slider {
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .caption-container {
+    position: absolute;
+    margin-left: -10px;
+    margin-top: -10px;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+  }
+
+  .caption-heading-box {
+    background-color: rgba(0, 0, 0, 0.7); /* Adjust the transparency as needed */
+    padding: 10px;
+    border-radius: 1px;
+  }
+
+  .caption-heading {
+    color: var(--main-color);
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .caption-subheading {
+    color: #fff;
+    font-size: 18px;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+  }
+
+  .caption-subheading::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .slide-container {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .slide {
+    flex: 0 0 100%;
+  }
+
+  .slide img {
+    margin-top: -32px;
+    width: 100%;
+    height: auto;
+  }
+
+  .slider-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -80px;
+  }
+
+  .slide-button, .view-button {
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .slide-button:hover, .view-button:hover {
+    background-color: #2980b9;
+  }
+
+  .project-slider p {
+    font-size: 15px;
+    text-align: left;
+    margin-top: -130px;
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+
+  .icon {
+    margin-top: -60px;
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+  }
+
+  .icon a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -80px;
+    margin-right: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 3rem;
+    color: var(--main-color);
+    box-sizing: content-box;
+  }
+
+  .icon a i {
+    font-size: 24px;
+    margin-right: 8px;
+  }
+  
+  .icon a .text {
+    display: block;
+    font-size: 10px;
+  }
+  
+  .github-link:hover {
+    color: #0366d6;
+  }
+
+.copyrigtht {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+  
+/* Add a media query to make styles responsive for screens smaller than 768px */
+@media only screen and (max-width: 768px) {
+    #scramble-text {
+        text-align: center;
+        width: 100%; /* Ensure full width on mobile */
+        margin: 0 auto; /* Center horizontally within its parent container */
+    }
+    .home h3 {
+        text-align: center;
+    }
+    
+
+
+    /* Adjust body padding for smaller screens */
+    body {
+      padding-top: 50px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  
+    /* Adjust header padding for smaller screens */
+    .header {
+      padding: 1rem;
+    }
+
+    /* Adjust max-width and padding for smaller screens */
+    .home {
+      max-width: 100%;
+      padding: 0 1rem;
+    }
+  
+  
+    /* Adjust font size for smaller screens */
+    .home-content h1 {
+      font-size: 4rem;
+    }
+
+  
+    /* Center the .btn and social media icons on smaller screens */
+    .social-media-container {
+        text-align: center;
+    }
+    
+    .social-media {
+        display: flex;
+        justify-content: center;
+        align-items: center; /* Align items vertically in the center */
+        flex-wrap: wrap; /* Allow icons to wrap to the next line if needed */
+    }
+    
+    .social-media a {
+        display: flex; /* Change to flex to align icon and text horizontally */
+        align-items: center; /* Align items vertically in the center */
+        margin: 0 -4px; /* Add margin for spacing between icons */
+        flex: 0 0 calc(40% - 20px); /* Two icons in a row, adjust as needed */
+        max-width: calc(40% - 10px); /* Ensure a maximum width for responsiveness */
+    }
+    
+    .social-media a i {
+        margin-right: 5px; /* Adjust spacing between icon and text */
+    }
+
+    .btn {
+        display: block;
+        margin: 20px auto 20px; /* Adjust margin as needed */
+        padding: 1.5rem 1.5rem; /* Adjust padding to increase button size */
+        font-size: 1.2rem; /* Adjust font size to increase text size */
+        margin-top: 2%;
+        margin-right: 32%;
+    } 
+    
+  
+    /* Adjust font size for heading elements on smaller screens */
+    .aboutme h3 {
+        margin-top: 80px;
+        font-size: 18px;
+        text-align: left;
+    }
+
+
+    .things h3{
+        font-size: 18px;
+        text-align: left;
+    }
+    .things button {
+        padding: 7px 15px; /* Adjust the padding as needed */
+        font-size: 12px; /* Adjust the font size as needed */
+        margin-right: 5px !important; /* Add !important to override any conflicting styles */
+        margin-bottom: 5px; /* Adjust the margin-bottom as needed */
+      }
+
+    .technologies h3{
+        font-size: 18px;
+        text-align: left;
+    }
+
+    .technologies {
+        text-align: center; /* Center the content horizontally */
+      }
+    
+    .icons-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .technologies a {
+        margin: 5px;
+    }
+
+    .web h3{
+        font-size: 18px;
+        text-align: left;
+    }
+    .machine h3{
+        font-size: 18px;
+        text-align: left;
+    }
+    .certificate h3 {
+        font-size: 18px;
+        text-align: left;
+        margin-left: 6%;
+    }
+
+    /* Adjust width, padding, and font size for responsive boxes on smaller screens */
+    .web-box{
+        flex: 1 1 100%; /* Set to full width */
+        height: auto; /* Let the height adjust automatically */
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .web-box2{
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .certificate-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .web-box3 {
+        flex: 1 0 calc(33.333% - 20px); /* Adjust the width and add margin */
+        max-width: calc(100% - 20px);
+        margin: 10px;
+        text-align: center; /* Center the text in the box */
+    }
+    
+    .web-box3 h2 {
+        font-size: 16px; /* Adjust the font size of h2 for better fit */
+        margin-bottom: 45px; /* Add margin below h2 */
+    }
+    
+    .web-box3 p {
+        margin-top: 180%;
+        font-size: 11px; /* Adjust the font size of paragraphs for better fit */
+    }
+    .certificate-container .web-box3 {
+        flex-basis: 100%; /* Set the last box to full width */
+    }
+    .web-box3 .btn {
+        padding: 5px 10px; /* Adjust the padding as needed */
+        font-size: 9px; /* Adjust the font size as needed */
+        margin-left: 35%;
+        margin-bottom: 2px; /* Adjust the margin-bottom as needed */
+    }
+
+    .project-slider{
+        flex: 1 0 calc(33.333% - 20px); /* Adjust the width and add margin */
+        max-width: calc(100% - 20px);
+        margin: 10px;
+        height: 45rem;
+        text-align: center; /* Center the text in the box */
+    }
+    .Project h3 {
+        text-align: left;
+        margin-left: 8px;
+
+    }
+    .slider-buttons {
+        margin-top: -120px;
+    }
+    .slide img {
+        margin-top: -38px;
+    }
+    .icon {
+        margin-top: -100px;
+        margin-left: 20px;
+    }
+    .icon a {
+        margin-right: -2px;
+    }
+    .icon a i {
+        margin-right: 2px;
+    }
+    .project-slider p {
+        margin-top: -160px;
+    }
+    .copyrigtht {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        font-size: 15px;
+    }
+    
+  }
+
+
