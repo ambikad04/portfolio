@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <link rel="icon" href="A-icon.png" type="image/A-icon">
+  <title>Portfolio: Ambika</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/boxicons/2.0.7/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-dfzT2FYpL6WxkjHKi6Jaq6qqSjZSHo9UH5cP8gv9s5Y5qjV4vZFDJYNMWO1X6pCh" crossorigin="anonymous">
+
+
+    <style>
+        #scramble-text {
+          font-size: 50px; /* Adjusted to medium size */
+          font-weight: 500;
+          display: inline-block;
+          white-space: pre;
+          color: aliceblue;
+        }
+       /* Set a maximum width for the content container */
+        .home {
+          text-align: left;
+          max-width: 1000px; /* Adjust the value as needed */
+          margin: 0 auto; /* Center the content horizontally */
+        }
+        /* Remove unnecessary styles for h3 and body */
+        h3 {
+          font-size: 15px;
+          font-weight: 100;
+          margin-top: 1px;
+          margin-bottom: 2px;
+          color: #ffffffb6;
+        }
+
+
+        
+      </style>
+</head>
+
+<body>
+
+<section class="home" id="home">
+    <div class="home-content">
+    <div id="scramble-text">Ambika </div>
+    <div>
+        <h3>Full Stack Java Web Developer, Looking for a full-time role</h3>
+        <div>
+          <div class="social-media">
+            <a href="#"><i class='bx bxl-github'></i><span class="text">Github</span></a>
+            <a href="#"><i class='bx bxl-linkedin-square'></i><span class="text">LinkedIn</span></a>
+            <a href="#"><i class='bx bxl-youtube' ></i><span class="text">YouTube</span></a>
+            <a href="#"><i class='bx bxs-envelope' ></i><span class="text">Email</span></a>
+          </div>
+          <div>
+            <a href="Ambika.pdf" class="btn">View Resume</a>
+          </div>
+            
+    <script>
+      // Function to scramble text
+      function scrambleText(text) {
+        let scrambledText = '';
+        const textArray = text.split('');
+    
+        while (textArray.length > 0) {
+          const randomIndex = Math.floor(Math.random() * textArray.length);
+          scrambledText += textArray.splice(randomIndex, 1)[0];
+        }
+    
+        return scrambledText;
+      }
+    
+      // Function to update the text with scramble effect
+      function updateScrambleText() {
+        const originalText = 'Ambika ' ;
+        const totalTime = 500; // 0.5 seconds
+        const scrambleInterval = totalTime / 20; // Milliseconds
+        const iterations = 20;
+    
+        let iterationCount = 0;
+        const intervalId = setInterval(() => {
+          document.getElementById('scramble-text').textContent = scrambleText(originalText);
+    
+          iterationCount++;
+          if (iterationCount === iterations) {
+            clearInterval(intervalId);
+            // Set the original text after the last iteration
+            document.getElementById('scramble-text').textContent = originalText;
+          }
+        }, scrambleInterval);
+      }
+    
+      // Call the function to start the text scramble effect after the page loads
+      window.onload = function () {
+        updateScrambleText();
+      };
+    </script>
+
+     <div class="aboutme">
+      <h3><span>Who am I?</span></h3>
+      <p>A Java web developer with technologies like <b>HTML5, CSS4, Servlets, and JSP,</b> and I am dedicated to continuously enhancing my skills in machine learning to bring innovative solutions to the intersection of web development.</p>
+      <p>Web Design is something I have keen interest in, although I don't think myself as a professional in this but year by year my skills have grown in it.</p>
+    </div>
+
+    <div class="things">
+      <h3>Things I love doing</h3>
+      <button><a class="button"><span>Full Stack Web development</span></a></button>
+      <button><a class="button">Machine Learning</a></button>
+      <button><a class="button">Video Editing</a></button>
+    </div>
+
+    <div class="technologies">
+      <h3>What technologies am I familiar with?</h3>
+      <div class="icons-container">
+        <a class="bx-html5"><i class='bx bxl-html5' data-text="HTML5"></i></a>
+        <a class="bx-css3"><i class='bx bxl-css3' data-text="CSS3"></i></a>
+        <a class="bx-javascript"><i class='bx bxl-javascript' data-text="JavaScript"></i></a>
+        <a class="bx-c-plus-plus"><i class='bx bxl-c-plus-plus' data-text="C"></i></a>
+        <a class="bx-java"><i class='bx bxl-java' data-text="Java"></i></a>
+        <a class="bx-php"><i class='bx bxl-php' data-text="PHP"></i></a>
+        <a class="bx-python"><i class='bx bxl-python' data-text="Python"></i></a>
+        <a class="mysql"><i class='bx bxs-database' data-text="MySQL"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="clear: both; display: block;">
+  <div class="web">
+    <h3 class="heading">My <span>Web Development</span> experiences</h3>
+    <div class="web-box">
+      <h2>Full Stack Java Web Developer</h2>
+      <p style="margin-top: -10px; text-align: left !important;  margin-left: -125px !important; color: #ffffffb3; ">Techno India Univercity</p>
+      <p style="margin-top: 10px; color: #ffffff6f; font-weight: 10; letter-spacing: .1rem;">Led Java hotel management system. Designed frontend (HTML, CSS, JS), managed backend (Servlets, JSP). Integrated Oracle 10g for data. Optimized reservation, room allocation, customer interaction for efficiency.</p>
+
+      <div style="margin-top: 15px; margin-left: -35px; margin-bottom: 40px; color: #ffffff6f;">
+        <div style="display: flex; align-items: center; margin-bottom: 10px; color: #ffffff6f;">
+          <i class='bx bxl-java' style="margin-right: 5px;"></i>
+          <span style="font-size: 12px;">Java</span>
+        </div>
+        <div style="display: flex; align-items: center; margin-bottom: 10px; color: #ffffff6f;">
+          <i class='bx bxl-html5' style="margin-right: 5px; font-size: 20px;"></i>
+          <span style="font-size: 12px;">HTML5</span>
+        </div>
+        <div style="display: flex; align-items: center; margin-bottom: 10px; color: #ffffff6f;">
+          <i class='bx bxl-css3' style="margin-right: 5px; font-size: 20px;"></i>
+          <span style="font-size: 12px;">CSS3</span>
+        </div>
+      </div>
+
+      <p style="margin-top: 10px; margin-left: 65px; margin-right: -50px; margin-bottom: -20px; font-size: 12px; color: #ffffff6f;"">10.2023 - 11.2023</p>
+    </div>
+  </div>
+</section>
+
+<section class="training">
+  <div class="machine">
+    <h3 class="heading">Training/Internship Experiences</h3>
+    <div class="web-box2">
+      <h2>Machine Learning using Python</h2>
+      <p style="margin-top: -10px; text-align: left !important; margin-left: -180px !important; margin-top: -10px; color: #ffffffb3;">Euphoria GenX</p>
+      <p style="margin-top: 10px; color: #ffffff6f; letter-spacing: .1rem;">Crop Prediction Pro: Employ ML for precise crop forecasts with agri data. Generate dynamic Matplotlib reports, clean data efficiently with Pandas, optimize numerical ops with NumPy for seamless ML integration. Enhance agricultural decisions with data-driven insights.</p>
+      <div style="margin-top: 0; margin-left: -50px; margin-bottom: 40px; display: flex; align-items: center;  color: #ffffff6f;">
+        <i class='bx bxl-python' style="margin-right: 5px; font-size: 18px;"></i>
+        <span style="font-size: 12px; margin-left: 0;">Python</span>
+      </div>
+      <div style="margin-top: 20px; margin-left: -23px;  display: flex; align-items: center; margin-bottom: 5px;  color: #ffffff6f;">
+        <i class='bx bx-code-alt' style="margin-left: -60px;  margin-right: 5px; font-size: 18px;"></i>
+        <span style="font-size: 12px; margin-left: 0;">Pandas</span>
+      </div>
+      <p style="margin-top: 10px; margin-bottom: -10px; font-size: 12px; margin-left: 10px;  color: #ffffff6f;">08.2023 - 09.2023</p>
+    </div>
+  </div>
+</section>
+
+<section class="certificate">
+  <div class="google">
+    <h3 class="heading">Certificates</h3>
+    
+    <div class="certificate-container"> 
+      <div class="web-box3">
+        <i class='bx bxl-google' style="margin-top: -30px; margin-left: -2px;"></i>
+        <h2 style="font-size: 12px; padding-top: 6%;">Crash Course Python</h2>
+        <p style="margin-top: -40px; color: #ffffff6f; letter-spacing: .1rem; display: flex; align-items: center;">Crash Course Python was a transformative journey, equipping me with comprehensive Python skills through engaging lessons, and a focus on best practices.</p>
+        <a href="Crash Course Python.pdf" class="btn"> View Certificate</a>
+      </div>
+
+      <div class="web-box3">
+        <i class='bx bxl-google' style="margin-top: -30px; margin-left: -2px;"></i>
+        <h2 style="font-size: 12px; padding-top: 6%; align-items: center;">Google Data Analytics</h2>
+        <p style="margin-top: -40px; color: #ffffff6f; letter-spacing: .1rem; display: flex; align-items: center;">Embarking on the Google Data Analytics course, I delved into the world of data analysis, acquiring essential skills and methodologies to extract meaningful insights from diverse datasets using Google tools and techniques.</p>
+        <a href="Google Data Analytics.pdf" class="btn"> View Certificate</a>
+      </div>
+
+      <div class="web-box3">
+        <i class='bx bxl-google' style="margin-top: -30px; margin-left: -2px;"></i>
+        <h2 style="font-size: 12px; padding-top: 6%; text-align: center; align-items: center;">Python with the Operating System</h2>
+        <p style="margin-top: -40px; color: #ffffff6f; letter-spacing: .1rem; display: flex; align-items: center;">Enhancing efficiency through Python's powerful interactions with the operating system, opening doors to scripting and automation possibilities.</p>
+        <a href="Python with the Operating System.pdf" class="btn"> View Certificate</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+<div class="Project">
+<h3>My Projects</h3>
+</div>
+<div class="project-slider">
+  <div class="caption-container">
+    <div class="caption-heading-box"> <!-- New container for the black transparent box -->
+      <h2 class="caption-heading">Hotel Management System</h2>
+    </div>
+  </div>
+  <div class="slide-container">
+    <div class="slide">
+      <img src="home.jpg" alt="Project Image 1">
+    </div>
+    <div class="slide">
+      <img src="aboutus.jpg" alt="Project Image 2">
+    </div>
+    <div class="slide">
+      <img src="a1.jpg" alt="Project Image 3">
+    </div>
+    <div class="slide">
+      <img src="login.jpg" alt="Project Image 4">
+    </div>
+  </div>
+
+  <div class="slider-buttons">
+    <button class="view-button" onclick="viewPhoto()">View Image</button>
+    <div style="width: 20px;"></div>
+    <button class="slide-button" onclick="prevSlide()">❮</button>
+    <div style="width: 10px;"></div>
+    <button class="slide-button" onclick="nextSlide()">❯</button>
+  </div>
+
+
+  <div class="icon">
+    <a href="#" class="github-link"><i class='bx bxl-github' ></i><span class="text">Frontend Code</span></a>
+    <a href="#" class="github-link"><i class='bx bxl-github' ></i><span class="text">Backend Code</span></a>
+    <a href="https://thecelestial.netlify.app/"><i class='bx bx-link-alt'></i><span class="text">Live Version</span></a>
+  </div>
+  <p>The Celestial Hotel Management System enhances efficiency, elevates guest experiences, and optimizes resource management for hotel operations.</p>
+  </div>
+
+
+
+  <script>
+    let currentIndex = 0;
+  
+    function nextSlide() {
+      if (currentIndex < 3) {
+        currentIndex++;
+      }
+      updateSlide();
+    }
+  
+    function prevSlide() {
+      if (currentIndex > 0) {
+        currentIndex--;
+      }
+      updateSlide();
+    }
+  
+    function updateSlide() {
+      const container = document.querySelector('.slide-container');
+      container.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+  
+    function viewPhoto() {
+      const currentImage = document.querySelector('.slide-container .slide:nth-child(' + (currentIndex + 1) + ') img');
+      window.open(currentImage.src, '_blank');
+    }
+  </script>
+
+</section>
+
+<div class="copyrigtht">
+  <span>&copy;Ambika Das ❤️ 2024</span>
+</div>
+
+</body>
+
+</html>
+
