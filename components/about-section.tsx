@@ -111,14 +111,13 @@ export default function AboutSection() {
             <div className="space-y-6 mt-8 lg:mt-0 lg:-ml-28">
               <motion.div variants={itemVariants} className="prose prose-lg text-gray-300 max-w-full">
                 <p className="text-lg leading-relaxed">
-                  I'm a dedicated AI Engineer and researcher based in Kolkata, India, with a strong academic background
-                  and hands-on experience in cutting-edge AI technologies. Currently pursuing my BCA with a CGPA of
-                  8.41, I've consistently ranked in the top 10 of my class.
+                  Hello World! I’m Ambika Das, an AI Engineer from Kolkata, India. I recently completed my Bachelor’s degree in Computer Science with a strong interest in Artificial Intelligence, Machine Learning, and Deep Learning.
                 </p>
                 <p className="text-lg leading-relaxed">
-                  My journey spans from developing real-time AI applications at WildChild Studios to conducting advanced
-                  research on Byzantine-robust federated learning at IIT Patna. I'm passionate about creating
-                  intelligent systems that make a real-world impact.
+                  I have worked on real-world AI projects like smart product scanners, AI storyboard generators, and secure Federated Learning systems. I’ve also done internships at IIT Patna and WildChild Studios, where I worked independently and as part of a team to build smart AI tools.
+                </p>
+                <p className="text-lg leading-relaxed">
+                  Along with my technical skills, I enjoy solving problems, doing research, and creating innovative solutions that make a difference. I’m always excited to learn and grow in this fast-moving field.
                 </p>
               </motion.div>
 
