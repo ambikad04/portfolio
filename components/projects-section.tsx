@@ -108,7 +108,7 @@ export default function ProjectsSection() {
   }
 
   return (
-    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 relative">
+    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 relative scroll-mt-20">
       <div className="max-w-7xl mx-auto">
         <motion.div
           ref={ref}

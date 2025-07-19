@@ -65,7 +65,7 @@ export default function AboutSection() {
   }
 
   return (
-    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 relative">
+    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 relative scroll-mt-20">
       <div className="max-w-7xl mx-auto">
         <motion.div
           ref={ref}
@@ -102,7 +102,7 @@ export default function AboutSection() {
                     />
                   </div>
                 </motion.div>
-                <div className="absolute -top-8 left-[70%] -translate-x-1/2 w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center">
+                <div className="absolute -top-8 left-[88%] sm:left-[70%] -translate-x-1/2 w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center">
                   <Brain className="w-8 h-8 text-white" />
                 </div>
               </div>

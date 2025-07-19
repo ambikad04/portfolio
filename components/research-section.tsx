@@ -53,7 +53,7 @@ export default function ResearchSection() {
   }
 
   return (
-    <section id="research" className="py-20 px-4 sm:px-6 lg:px-8 relative">
+    <section id="research" className="py-20 px-4 sm:px-6 lg:px-8 relative scroll-mt-20">
       <div className="max-w-7xl mx-auto">
         <motion.div
           ref={ref}

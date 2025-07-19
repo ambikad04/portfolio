@@ -40,12 +40,27 @@ export default function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  const scrollToSection = (href: string) => {
-    const element = document.getElementById(href.substring(1))
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
+  // Prevent background scroll when mobile menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = ""
     }
-    setIsOpen(false)
+    return () => {
+      document.body.style.overflow = ""
+    }
+  }, [isOpen])
+
+  const scrollToSection = (href: string) => {
+    const element = document.getElementById(href.substring(1));
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      // Delay closing the menu to allow scroll to start (especially on mobile)
+      setTimeout(() => setIsOpen(false), 400);
+    } else {
+      setIsOpen(false);
+    }
   }
 
   return (
@@ -60,7 +75,7 @@ export default function Navigation() {
             whileHover={{ scale: 1.05 }}
             className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent"
           >
-            Ambika Das
+            AD
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -104,18 +119,19 @@ export default function Navigation() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-slate-800/95 backdrop-blur-md border-t border-purple-500/20"
+            className="md:hidden bg-slate-800/95 backdrop-blur-md border-t border-purple-500/20 pointer-events-auto z-50"
           >
             <div className="px-4 py-2 space-y-1">
               {navItems.map((item) => (
-                <motion.button
+                <motion.a
                   key={item.name}
-                  onClick={() => scrollToSection(item.href)}
+                  href={item.href}
+                  onClick={() => setTimeout(() => setIsOpen(false), 400)}
                   className="block w-full text-left px-3 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-purple-500/20 rounded-lg transition-colors"
                   whileHover={{ x: 10 }}
                 >
                   {item.name}
-                </motion.button>
+                </motion.a>
               ))}
             </div>
           </motion.div>
