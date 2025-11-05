@@ -82,7 +82,7 @@ export default function AboutSection() {
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Passionate AI Engineer with expertise in machine learning, deep learning, and secure federated systems
+             A Researcher and AI Engineer with expertise in machine learning, deep learning, and secure federated systems
             </p>
           </motion.div>
 
@@ -111,13 +111,14 @@ export default function AboutSection() {
             <div className="space-y-6 mt-8 lg:mt-0 lg:-ml-28">
               <motion.div variants={itemVariants} className="prose prose-lg text-gray-300 max-w-full">
                 <p className="text-lg leading-relaxed">
-                  Hello World! I’m Ambika Das, an AI Engineer from Kolkata, India. I recently completed my Bachelor’s degree in Computer Science with a strong interest in Artificial Intelligence, Machine Learning, and Deep Learning.
+                Hello World! I’m Ambika Das — a Junior Research Fellow at IIT Patna, working on Secure and Blockchain-based Federated Learning (SBFL).
+                My research focuses on building robust and privacy-preserving decentralized AI systems that can defend against model poisoning and backdoor attacks.
                 </p>
                 <p className="text-lg leading-relaxed">
-                  I have worked on real-world AI projects like smart product scanners, AI storyboard generators, and secure Federated Learning systems. I’ve also done internships at IIT Patna and WildChild Studios, where I worked independently and as part of a team to build smart AI tools.
+                I work with PyTorch, GANs, and robust aggregation methods to enhance the reliability of federated models under non-IID data, and authored a research paper on nanosensor-based ML for agriculture, published by Apple Academic Press.
                 </p>
                 <p className="text-lg leading-relaxed">
-                  Along with my technical skills, I enjoy solving problems, doing research, and creating innovative solutions that make a difference. I’m always excited to learn and grow in this fast-moving field.
+                I’m passionate about secure AI, deep learning research, and creating real-world intelligent systems that make technology safer and smarter.
                 </p>
               </motion.div>
 

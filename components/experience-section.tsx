@@ -9,22 +9,21 @@ import { Badge } from "@/components/ui/badge"
 
 const experiences = [
   {
-    company: "WildChild Studios",
-    role: "AI/ML Engineer",
+    company: "Indian Institute of Technology Patna",
+    role: "Junior Researcher",
     period: "Jan 2025 – June 2025",
-    location: " Ahmedabad, Gujarat, India ",
-    description: "Developing cutting-edge AI solutions for real-world applications",
+    location: " Patna, Bihar, India ",
+    description: "Conducting research in Secure Blockchain-based Federated Learning (SBFL) for building robust and trustworthy decentralized AI systems",
     projects: [
-      "Smart Cart System - Real-time object detection and inventory management",
-      "AI Storyboard Generator - Automated visual storytelling using deep learning",
+      "LIFT chain: Development of Language-Independent Formal Method Toolchain for Efficient and Verified Blockchain Smart Contracts",
     ],
-    technologies: ["Python", "TensorFlow", "Computer Vision", "Deep Learning", "REST APIs"],
-    logo: "🤖",
+    technologies: ["Python", "TensorFlow", "Blockchain", "Deep Learning", "Ethereum"],
+    logo: "🔬",
   },
   {
-    company: "IIT Patna",
-    role: "Deep Learning Research Intern",
-    period: "Jan 2025 – Ongoing",
+    company: "Indian Institute of Technology Patna",
+    role: "Research Intern",
+    period: "Nov 2024 – July 2025",
     location: "Patna, Bihar, India",
     description: "Research focused on security aspects of federated learning systems",
     projects: [
@@ -32,7 +31,7 @@ const experiences = [
       "GAN-based Defenses - Developing robust defense mechanisms using generative models",
     ],
     technologies: ["PyTorch", "Federated Learning", "GANs", "Security Research", "Python"],
-    logo: "🖱️",
+    logo: "🤖",
   },
 ]
 
