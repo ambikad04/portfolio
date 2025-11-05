@@ -111,7 +111,7 @@ export default function AboutSection() {
             <div className="space-y-6 mt-8 lg:mt-0 lg:-ml-28">
               <motion.div variants={itemVariants} className="prose prose-lg text-gray-300 max-w-full">
                 <p className="text-lg leading-relaxed">
-                Hello World! I’m Ambika Das — a Junior Research Fellow at IIT Patna, working on Secure and Blockchain-based Federated Learning (SBFL).
+                Hello World! I’m Ambika Das — a Junior Researcher at Indian Institute of Technology Patna, working on Secure and Blockchain-based Federated Learning (SBFL).
                 My research focuses on building robust and privacy-preserving decentralized AI systems that can defend against model poisoning and backdoor attacks.
                 </p>
                 <p className="text-lg leading-relaxed">

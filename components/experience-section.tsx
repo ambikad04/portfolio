@@ -11,7 +11,7 @@ const experiences = [
   {
     company: "Indian Institute of Technology Patna",
     role: "Junior Researcher",
-    period: "Jan 2025 – June 2025",
+    period: "Jan 2025 – Present",
     location: " Patna, Bihar, India ",
     description: "Conducting research in Secure Blockchain-based Federated Learning (SBFL) for building robust and trustworthy decentralized AI systems",
     projects: [
