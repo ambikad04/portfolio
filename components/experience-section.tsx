@@ -10,7 +10,7 @@ import { Badge } from "@/components/ui/badge"
 const experiences = [
   {
     company: "Indian Institute of Technology Patna",
-    role: "Junior Researcher",
+    role: "Researcher",
     period: "Jan 2025 – Present",
     location: " Patna, Bihar, India ",
     description: "Conducting research in Secure Blockchain-based Federated Learning (SBFL) for building robust and trustworthy decentralized AI systems",
